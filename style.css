@@ -1,0 +1,121 @@
+/* Sujana Sarees - stylesheet */
+:root{
+  --maroon:#7a1230; --maroon-d:#560b21; --gold:#c9972b; --cream:#fff8ec;
+  --ink:#2b1b1f; --muted:#6f5a5f; --card:#ffffff; --line:#ecdcc3;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Georgia,'Times New Roman',serif;background:var(--cream);color:var(--ink);line-height:1.6}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1150px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-weight:600}
+h2.title{font-size:2rem;color:var(--maroon);text-align:center;margin-bottom:6px}
+.sub{text-align:center;color:var(--muted);margin-bottom:34px}
+.gold-line{width:70px;height:3px;background:var(--gold);margin:8px auto 14px;border-radius:3px}
+section{padding:70px 0}
+
+/* Header */
+header{position:sticky;top:0;z-index:50;background:var(--maroon-d);color:#fff;box-shadow:0 2px 10px rgba(0,0,0,.25)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{width:46px;height:46px;border-radius:50%;background:radial-gradient(circle at 30% 30%,#e8b94a,var(--gold));
+  color:var(--maroon-d);display:grid;place-items:center;font-size:1.7rem;font-weight:700;border:2px solid #fff3;font-family:Georgia,serif}
+.brand span{font-size:1.4rem;letter-spacing:1px}
+.brand small{display:block;font-size:.65rem;letter-spacing:3px;color:#e8c982;margin-top:-4px}
+nav ul{display:flex;gap:26px;list-style:none}
+nav a{font-size:.95rem;padding:6px 2px;border-bottom:2px solid transparent;transition:.2s}
+nav a:hover{border-color:var(--gold);color:#f3d68a}
+.burger{display:none;background:none;border:0;color:#fff;font-size:1.8rem;cursor:pointer}
+
+/* Banner */
+.banner{
+  background:
+    linear-gradient(120deg,rgba(86,11,33,.93),rgba(122,18,48,.82)),
+    repeating-linear-gradient(45deg,#c9972b22 0 14px,transparent 14px 28px);
+  color:#fff;text-align:center;padding:110px 20px 100px;position:relative;overflow:hidden}
+.banner::after{content:"";position:absolute;inset:auto 0 0 0;height:8px;
+  background:repeating-linear-gradient(90deg,var(--gold) 0 18px,var(--maroon-d) 18px 36px)}
+.banner h1{font-size:clamp(2.2rem,6vw,4rem);letter-spacing:2px}
+.banner p{max-width:640px;margin:16px auto 30px;font-size:1.15rem;color:#f7e6c0}
+.btn{display:inline-block;background:var(--gold);color:var(--maroon-d);padding:13px 30px;border-radius:30px;
+  font-weight:700;border:0;cursor:pointer;font-size:1rem;font-family:inherit;transition:.2s}
+.btn:hover{background:#e3b146;transform:translateY(-2px)}
+.btn.ghost{background:transparent;border:2px solid var(--gold);color:#f3d68a;margin-left:10px}
+
+/* Mission */
+.mission{background:#fff}
+.mission-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:10px}
+.m-card{border:1px solid var(--line);border-radius:14px;padding:28px 22px;text-align:center;background:var(--cream)}
+.m-card .ic{font-size:2rem;margin-bottom:8px}
+.m-card h3{color:var(--maroon);margin-bottom:6px}
+.mission-text{max-width:780px;margin:0 auto 30px;text-align:center;font-size:1.1rem;color:var(--muted)}
+
+/* Collection */
+.filters{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:18px}
+.filters button{padding:9px 22px;border-radius:25px;border:1.5px solid var(--maroon);background:#fff;color:var(--maroon);
+  cursor:pointer;font-family:inherit;font-size:.95rem;transition:.2s}
+.filters button.active,.filters button:hover{background:var(--maroon);color:#fff}
+.search{display:block;margin:0 auto 30px;width:min(420px,100%);padding:11px 18px;border-radius:25px;border:1.5px solid var(--line);font-size:1rem;font-family:inherit}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:24px}
+.card{background:var(--card);border-radius:14px;overflow:hidden;border:1px solid var(--line);transition:.25s;display:flex;flex-direction:column}
+.card:hover{transform:translateY(-5px);box-shadow:0 10px 24px rgba(86,11,33,.15)}
+.swatch{height:190px;position:relative}
+.swatch .border-top,.swatch .border-bot{position:absolute;left:0;right:0;height:22px}
+.swatch .border-top{top:0}.swatch .border-bot{bottom:0}
+.tag{position:absolute;top:30px;left:10px;background:#fffc;color:var(--maroon-d);font-size:.72rem;padding:3px 10px;border-radius:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase}
+.info{padding:16px;display:flex;flex-direction:column;gap:4px;flex:1}
+.info h3{font-size:1.05rem;color:var(--maroon-d)}
+.info .meta{font-size:.85rem;color:var(--muted)}
+.price{font-size:1.2rem;color:var(--maroon);font-weight:700;margin-top:6px}
+.price s{font-size:.85rem;color:#999;font-weight:400;margin-left:6px}
+.card .btn{margin-top:auto;padding:9px;text-align:center;font-size:.9rem;border-radius:8px;background:var(--maroon);color:#fff}
+.card .btn:hover{background:var(--maroon-d)}
+.empty{text-align:center;color:var(--muted);grid-column:1/-1}
+.note{text-align:center;font-size:.8rem;color:var(--muted);margin-top:22px}
+
+/* Outreach */
+.outreach{background:var(--maroon-d);color:#fff}
+.outreach h2.title{color:#f3d68a}.outreach .sub{color:#e9d3d9}
+.states{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.state{background:#ffffff12;border:1px solid #ffffff25;border-radius:14px;padding:26px}
+.state h3{color:#f3d68a;font-size:1.4rem;margin-bottom:12px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{background:#ffffff1c;padding:5px 14px;border-radius:16px;font-size:.9rem}
+.stats{display:flex;justify-content:center;gap:50px;flex-wrap:wrap;margin-top:40px;text-align:center}
+.stats b{display:block;font-size:2.2rem;color:var(--gold)}
+
+/* Testimonials */
+.t-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+.t-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px;position:relative}
+.t-card::before{content:"\201C";position:absolute;top:2px;left:16px;font-size:4rem;color:var(--gold);opacity:.5;line-height:1}
+.t-card p{margin-top:22px;font-style:italic;color:var(--muted)}
+.t-card .who{margin-top:14px;font-weight:700;color:var(--maroon)}
+.t-card .who small{display:block;color:var(--muted);font-weight:400}
+.stars{color:var(--gold);letter-spacing:2px;margin-top:8px}
+
+/* Contact */
+.contact{background:#fff}
+.c-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:36px}
+.c-info{background:var(--cream);border:1px solid var(--line);border-radius:14px;padding:30px}
+.c-info h3{color:var(--maroon);margin-bottom:14px}
+.c-info p{margin-bottom:14px}
+.c-info a{color:var(--maroon);font-weight:700}
+form{display:grid;gap:14px}
+label{font-size:.9rem;color:var(--muted)}
+input,select,textarea{width:100%;padding:12px 14px;border:1.5px solid var(--line);border-radius:8px;font-size:1rem;font-family:inherit;background:#fffdf8}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--gold);border-color:var(--gold)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.msg{padding:12px;border-radius:8px;display:none;font-size:.95rem}
+.msg.ok{display:block;background:#e6f5e9;color:#1d5b2b}
+.msg.err{display:block;background:#fde8e8;color:#8a1c1c}
+
+footer{background:#2b0a14;color:#d9c3c9;text-align:center;padding:26px 20px;font-size:.9rem}
+
+@media(max-width:820px){
+  .burger{display:block}
+  nav ul{position:absolute;top:68px;left:0;right:0;background:var(--maroon-d);flex-direction:column;gap:0;display:none}
+  nav ul.open{display:flex}
+  nav li a{display:block;padding:14px 24px;border-top:1px solid #ffffff18}
+  .mission-grid,.states,.c-grid,.row{grid-template-columns:1fr}
+  .btn.ghost{margin:12px 0 0}
+}
